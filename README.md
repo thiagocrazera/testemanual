@@ -23,20 +23,28 @@ Durante a análise do sistema foram aplicadas técnicas de:
 
 ## 1. Cadastro permite envio de campos obrigatórios vazios
 
-Descrição:
+**Descrição:**
+
 O sistema permite criar conta mesmo sem preencher os campos obrigatórios.
 
-Passos:
+**Passos para reproduzir:**
 
-Acessar tela "Criar conta"
+1 - Acessar tela "Criar conta"
 
-Deixar campos vazios
+2 - Deixar campos vazios
 
-Clicar em "Criar conta"
+3 - Clicar em "Criar conta"
 
-Resultado atual => Conta criada com sucesso.
+**Resultado atual:**
 
-Resultado esperado => Sistema deve bloquear envio e apresentar mensagem de erro.
+A conta é criada e o sistema redireciona para a tela de sucesso.
 
-Severidade: Alto
-Prioridade: Alta
+**Resultado esperado:**
+
+O sistema deve impedir o cadastro e apresentar mensagens de validação informando que os campos são obrigatórios.
+
+**Severidade:** Alto
+
+**Prioridade:** Alta
+
+
