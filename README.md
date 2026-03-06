@@ -5,6 +5,7 @@
 Sistema testado: https://qa-play-sim.lovable.app/
 
 Navegador utilizado: Google Chrome - Versão 145.0.7632.160 (Versão oficial) 64 bits
+
 Sistema operacional: Microsoft Windows 11 Pro
 
 ## Metodologia de Teste
