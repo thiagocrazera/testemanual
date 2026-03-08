@@ -49,6 +49,7 @@ O sistema deve impedir o cadastro e apresentar mensagens de validação informan
 [Ver Video](./evidencias/bug-01-cadastro-sem-validacao.mp4)
 
 **Severidade:** Alto
+
 **Prioridade:** Alta
 
 ---
@@ -84,6 +85,7 @@ O sistema deve impedir a criação da conta e apresentar mensagem informando que
 [Ver Video](./evidencias/bug-02-senha-sem-validacao.mp4)
 
 **Severidade:** Alto
+
 **Prioridade:** Alta
 
 ---
@@ -115,6 +117,7 @@ O sistema aceita o cadastro e cria a conta normalmente.
 O sistema deve impedir o cadastro e apresentar mensagem informando que os campos de senha não coincidem.
 
 **Severidade:** Alto
+
 **Prioridade:** Alta
 
 ---
@@ -148,6 +151,7 @@ O sistema deve validar o formato do e-mail e impedir o cadastro quando o valor i
 [Ver Video](./evidencias/bug-04-email-invalido.mp4)
 
 **Severidade:** Médio
+
 **Prioridade:** Média
 
 ---
@@ -181,6 +185,7 @@ O sistema deve permitir apenas números no campo telefone ou validar corretament
 [Ver Video](./evidencias/bug-05-telefone-aceita-letras.mp4)
 
 **Severidade:** Médio
+
 **Prioridade:** Média
 
 ---
@@ -212,6 +217,7 @@ Após login bem-sucedido, o sistema deve exibir apenas a mensagem de sucesso, se
 [Ver Print](./evidencias/bug-06-erro-inesperado-login.png)
 
 **Severidade:** Médio
+
 **Prioridade:** Média
 
 ---
@@ -243,4 +249,70 @@ Os campos devem permanecer alinhados dentro do container do formulário, respeit
 [Ver Print](./evidencias/bug-07-quebra-layout-formulario.png)
 
 **Severidade:** Baixo
+
 **Prioridade:** Baixa
+
+---
+
+# Priorização de Correção de Bugs
+
+Durante a análise do sistema foram identificados diversos problemas.  
+Entre eles, os dois bugs que deveriam ser corrigidos com maior prioridade são:
+
+## 1. Cadastro permite envio de campos obrigatórios vazios
+
+Esse problema impacta diretamente a integridade dos dados do sistema.  
+Permitir que contas sejam criadas sem o preenchimento de campos obrigatórios pode gerar registros incompletos e comprometer o funcionamento de funcionalidades que dependem dessas informações.
+
+Além disso, pode causar inconsistência na base de dados e dificultar validações futuras dentro da aplicação.
+
+Por esse motivo, esse bug deve ser tratado com **prioridade alta**.
+
+---
+
+## 2. Cadastro aceita senha que não atende aos requisitos mínimos
+
+A interface informa que a senha deve possuir no mínimo **8 caracteres e 1 caractere especial**, porém essa regra não é validada pelo sistema.
+
+Esse problema impacta diretamente a **segurança da aplicação**, pois permite que usuários criem senhas fracas, aumentando o risco de acesso não autorizado.
+
+Garantir validação correta de senha é uma prática básica de segurança e deve ser tratada como **alta prioridade**.
+
+---
+
+
+# Sugestões de Melhoria
+
+## 1. Implementar validação completa de formulário
+
+O formulário de cadastro deveria possuir validação adequada para todos os campos obrigatórios, impedindo o envio de dados incompletos ou inválidos.
+
+Além disso, mensagens de erro claras devem ser exibidas para orientar o usuário na correção dos dados informados.
+
+---
+
+## 2. Aplicar regras de segurança para criação de senha
+
+O sistema deveria validar corretamente as regras informadas na interface para criação de senha, garantindo que a senha tenha no mínimo 8 caracteres e ao menos um caractere especial.
+
+Isso melhora a segurança da aplicação e reduz riscos de acesso indevido.
+
+---
+
+## 3. Implementar validação de formato para e-mail e telefone
+
+Campos como e-mail e telefone deveriam validar o formato correto das informações antes de permitir o envio do formulário.
+
+---
+
+## 4. Melhorar feedback visual ao usuário
+
+O sistema deveria apresentar mensagens claras de erro ou sucesso para orientar o usuário durante o processo de cadastro e login, evitando inconsistências como a exibição simultânea de mensagens de sucesso e erro.
+
+---
+
+## 5. Ajustar layout e responsividade do formulário
+
+Alguns campos do formulário apresentam quebra de layout, ultrapassando os limites do container da interface.
+
+Ajustar o layout melhora a experiência visual e garante maior consistência da interface em diferentes resoluções de tela.
