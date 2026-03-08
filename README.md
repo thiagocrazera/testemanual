@@ -116,6 +116,10 @@ O sistema aceita o cadastro e cria a conta normalmente.
 
 O sistema deve impedir o cadastro e apresentar mensagem informando que os campos de senha não coincidem.
 
+**Evidência em video:** 
+
+[Ver Video](./evidencias/bug-03-correspondencia-senha.mp4)
+
 **Severidade:** Alto
 
 **Prioridade:** Alta
