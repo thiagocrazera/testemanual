@@ -43,7 +43,7 @@ A conta é criada e o sistema redireciona para a tela de sucesso.
 
 O sistema deve impedir o cadastro e apresentar mensagens de validação informando que os campos são obrigatórios.
 
-**Evidência em vídeo:**  
+**Evidência:**  
 
 [Ver Video](./evidencias/bug-01-cadastro-sem-validacao.mp4)
 
@@ -65,7 +65,7 @@ A interface informa que a senha precisa ter no mínimo **8 caracteres e 1 caract
 
 2 - Preencher os campos obrigatórios
 
-3 - Inserir uma senha inválida (exemplo: 123)
+3 - Inserir uma senha inválida (exemplo: 1234567)
 
 4 - Confirmar a senha
 
@@ -79,7 +79,7 @@ A conta é criada normalmente mesmo utilizando senha que não atende aos requisi
 
 O sistema deve impedir a criação da conta e apresentar mensagem informando que a senha precisa ter no mínimo 8 caracteres e 1 caractere especial.
 
-**Evidência em video:** 
+**Evidência:** 
 
 [Ver Video](./evidencias/bug-02-senha-sem-validacao.mp4)
 
@@ -115,7 +115,7 @@ O sistema aceita o cadastro e cria a conta normalmente.
 
 O sistema deve impedir o cadastro e apresentar mensagem informando que os campos de senha não coincidem.
 
-**Evidência em video:** 
+**Evidência:** 
 
 [Ver Video](./evidencias/bug-03-correspondencia-senha.mp4)
 
